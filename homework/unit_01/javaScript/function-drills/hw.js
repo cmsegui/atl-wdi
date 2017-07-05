@@ -11,7 +11,14 @@
 // Output: the sum of the numbers that were passed in
 // Edge Case: If the array is empty, return 0
 var sumOfNums = function(numsArray){
-  // Your Code Here
+  if (numsArray === 0) {
+    return 0;
+  }
+var total = 0; 
+  for (var i = 0; i < numsArray.length; i++) {
+    total = total + numsArray[i];
+  }
+  return total;
 };
 
 // #2
@@ -19,7 +26,13 @@ var sumOfNums = function(numsArray){
 // Output: an array of the numbers from the first array that are strictly
 //         greater (i.e. greater than but not equal to) than 10
 var numsGreaterThanTen = function(numsArray){
-  // Your Code Here
+  var nums = [];
+    for (var i = 0; i < numsArray.length; i++) {
+      if (numsArray[i] > 10) {
+        nums.push(numsArray[1]);
+      }
+    }
+    return nums;
 };
 
 // #3
@@ -28,14 +41,22 @@ var numsGreaterThanTen = function(numsArray){
 //         `false` otherwise
 // Edge Case: If the input array is empty, the function should return `true`.
 var allGreaterThanTen = function(numsArray){
-  // Your Code Here
+  if (numsArray === []) {
+    return true;
+  }
+var nums = 10;
+  for (var i = 0; i < numsArray.length; i++) {
+    nums = nums + numsArray[i];
+  }
+  return false;
 };
 
 // #4
 // Input: an array of words
 // Output: an array of all words from the first array with five or more letters
 var wordsWithAtLeastFiveLetters = function(words){
-  // Your Code Here
+  
+
 };
 
 // #5
@@ -44,7 +65,14 @@ var wordsWithAtLeastFiveLetters = function(words){
 //          `false` otherwise
 // Edge Case: If the array is empty, the function should return `true`.
 var allStartingWithA = function(words){
-  // Your Code Here
+  if (words === []) {
+    return true;
+  }
+for (var i = 0; i <words.length; i++) { 
+  if (!words[i].toLowerCase().startsWith('a')) {
+      return false;
+    }
+}
 };
 
 // #6
@@ -52,7 +80,7 @@ var allStartingWithA = function(words){
 // Output: `true` if there are ANY words that start with the letter 'b'
 //          (case-insensitive), `false` otherwise
 var anyStartingWithB = function(words){
-  // Your Code Here
+  for (var i = 0; i < words.length; i++) {
 };
 
 // #7
@@ -62,7 +90,12 @@ var anyStartingWithB = function(words){
 //    Assume that vowels are 'a', 'e', 'i', 'o', and 'u' (NOT 'y')
 // Edge Case: If `n` is less than zero, return `null`.
 var hasAtLeastNVowels = function(word, n){
-  // Your Code Here
+  if (n < 0) {
+    return null;
+  }
+for (var i = 0; i < word.length; i++) {
+  
+  indexOf
 };
 
 // #8
@@ -86,7 +119,12 @@ var allHaveAtLeastTwoVowels = function(words){
 // Output: `true` if there are ANY words have two or more vowels,
 //          `false` otherwise.
 var anyHaveAtLeastTwoVowels = function(words){
-  // Your Code Here
+  for (var i = 0; i < words.length; i++) {
+    if (hasAtLeastNVowels(words[i], 2)) {
+      return true;
+    }
+  }
+  return false;
 };
 
 // #11
@@ -105,7 +143,11 @@ var noneHaveTwoOrMoreVowels = function(words){
 // e.g. given ['cat', 'horse', 'elephant'],
 //      return { cat: 3, horse: 5, elephant: 8}
 var buildObjectFromWords = function(words){
-  // Your Code Here
+  var result = {};
+  for (var i = 0; i < words.length; i++) {
+    result[words[i]] = words[i].length;
+  }
+  return result;
 };
 
 
