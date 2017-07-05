@@ -95,7 +95,7 @@ var hasAtLeastNVowels = function(word, n){
   }
 for (var i = 0; i < word.length; i++) {
   
-  indexOf
+  
 };
 
 // #8
@@ -111,7 +111,7 @@ var wordsWithAtLeastTwoVowels = function(words){
 // Output: `true` if ALL words have two or more vowels, `false` otherwise
 // Edge Case: If the array is empty, the function should return `true`.
 var allHaveAtLeastTwoVowels = function(words){
-  // Your Code Here
+  for (var i = 0; i < words.length; i++) {
 };
 
 // #10
