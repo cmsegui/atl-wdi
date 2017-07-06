@@ -32,16 +32,23 @@ true
 
 // 6. Write a `while` loop that increases `resSix` by 23 until `resSix` is five
 //    digits long. (Hint: take a look at the .toString() method)
-var resSix;
-  while(i < 5) {
-
-  }
+var resSix = 5;
+while (resSix.toString().length < 5) {
+  resSix += 23;
+}
 
 // 7. Write a `while` loop that increases `resSeven` by 12 when it's strictly
 //    below 95, decreases it by 7 when it's strictly above 105, and stops as
 //    soon as `resSeven` equals or falls between those two values.
-var resSeven;
-  
+
+var resSeven = 
+  while(resSeven < 95) || resSeven ? 105 {
+    if (resSeven = 95) {
+      resSeven === 12;
+    }
+  else(resSeven === 7) 
+ }
+
 
 // 8. Write a `for` loop that counts from 0 (inclusive) to 1857 (exclusive) and
 //    calculates the sum of all of those numbers, storing the result in the

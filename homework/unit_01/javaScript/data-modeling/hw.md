@@ -60,13 +60,39 @@ track of whether tasks have been completed, it will also keep track of
 how long each task took to complete. Tasks can be grouped into 'projects' to
 keep them organized.
 
-> Answer here
+var tasks = {
+  name: "laundry"
+  startTime: "10:15"
+  endTime: "12:00"
+}
+
+var projects = {
+  name: "slave labor"
+  tasksCompleted: ["laundry", "sweep", "mop"]
+}
+
+Choices make sense b/c app wants to name the tasks/projects and keep track of time.
 
 ### 2. Photo Sharing App
 
 In this app, users can upload photos to their accounts and share them with others. These photos can be grouped into albums.
 
-> Answer here
+var user = {
+  name: "Becky"
+  numberOfPhotos: 17
+}
+
+var photos = {
+  name: "obligatory vacay pic"
+  date: "07/1/17"
+}
+
+var albums = {
+  name: "Beach trip"
+  numberOfPhotos: 34
+  imagesInAlbum : ["photo names", "photo names"]
+}
+I just tried to think of stuff on IG.
 
 ### 3. Home Automation Manager
 
@@ -75,7 +101,18 @@ track of the time and temperature of the house that it monitors, and use that
 information to turn on and off different lights and adjust the thermostat up
 and down.
 
-> Answer here
+house = {
+  thermostat: 93
+  location: "Arizona"
+  roomLights: "kitchen"
+}
+
+light = {
+  name: "kitchen"
+  brightness: "low schexy light"
+}
+
+This is for folks who buy the nest b/c they're fancy and they need ten thousand light configurations.
 
 ### 4. Sneaker Store
 
@@ -83,7 +120,23 @@ This app will allow customers to browse a list of products (sneakers, in this
 case), add those products to a cart, and save that cart as a past order once the
 purchase is complete.
 
-> Answer here
+sneakers = {
+  brand: "adidas"
+  name: "yeezy boost 350"
+  price: 200
+}
+
+cart = {
+  productName: "adidas" "yeezy boost 350"
+  size: 10
+  color: "black"
+}
+
+purchasedItem = {
+  shipdate: "07/14/17"
+  shippingStatus: "to be shipped"
+}
+Makes sense bc these are things you wanna know when you buy shoes online.
 
 ## Representing Abstractions in Code
 
@@ -139,7 +192,7 @@ var exampleLine = {
 
 What are some advantages and disadvantages of choosing these representations? Please give at least one example of each.
 
-> Answer here
+Advantage - since the description outlines points of interest, someone could use it to plan out stops.  Disadvantage - there is no way to tell how long the routes are, which could be really useful.
 
 ### 6. Doctor Appointment App
 
@@ -242,7 +295,8 @@ Under what circumstances might one representation be a better choice than the
 other? Are there any circumstances in which the other representation might be
 the better choice?
 
-> Answer here
+I think option 2 is easier to read, and you can see all the appointments better.  Since ppl don't go to the dr. every day, you could search for individual patients on their own when needed.
+
 
 ## Tying It Together
 
@@ -253,13 +307,25 @@ You've been tasked with building an in-browser tic-tac-toe game.
 a.  What are some possible entities that your application might use to model its
     data? Please pick at least two, with at least two properties apiece.
 
-  > Answer here
+  player 1/2 need names and avatar.  game needs an x player and an o.  each move needs to be tracked (was it x or was it o), and where on the board they played. also congratulatory message at the end or nice message for the loser.
 
 b.  How might those entities be represented in JavaScript code?
 
-  > Answer here
+var xPlayer = {
+  name: "michael jackson"
+  avatar: "http://imgur.com/eeeheee.jpg"
+}
+var oPlayer = {
+  name: "blanket jackson"
+  avatar: "http://imgur.com/dangledangle.jpg"
+}
+
+var moves = {
+  player: xPlayer
+  position: 4
+}
+
 
 c.  Justify your choices in a) and b). Why these entities? Why these
     representations?
-
-  > Answer here
+I've played tic-tac-toe, thats what you need...because I'm my own woman?  
