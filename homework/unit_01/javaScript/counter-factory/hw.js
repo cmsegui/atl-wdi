@@ -49,15 +49,38 @@ const CounterCollection = {
 const Presenter = {
   insertCounterComponent: function(newCountId){
     console.log(`insert counter component #${newCountId}`);
-    // Your Code Here
+    var counterId = CounterCollection.createCounter(); 
+    var counterList = document.getElementById("counter-list");
+    var counterElement = document.createElement('div');
+    counterElement.setAttribute('class','counter');
+    counterElement.setAttribute('data-count-id', counterId);
+    var headerElement = document.createElement('h3');
+    headerElement.textContent = 'Count: ';
+    var spanElement = document.createElement('span');
+    spanElement.textContent = '0';
+    headerElement.appendChild(spanElement);
+    var buttonElement = document.createElement('button');
+    buttonElement.setAttribute('class','increment');
+    buttonElement.textContent = ' + 1';
+    counterElement.appendChild(headerElement);
+    counterElement.appendChild(buttonElement);
+    counterList.appendChild(counterElement);
   },
   refreshCounterComponent: function(countId){
     console.log(`refresh counter component #${countId}`);
-    // Your Code Here
+    var counterValue = CounterCollection.getCounterValue(countId);
+    if (counterValue) {
+      document.querySelector("[data-count-id]")
+    }
+
+
+
+
+
   },
   removeCounterComponent: function(countId){             // REACH
     console.log(`remove counter component #${countId}`);
-    // Your Code Here
+    
   }
 };
 
@@ -77,3 +100,4 @@ const AppController = {
 window.onload = function(){
   document.getElementById('new-counter').onclick = AppController.onClickNewCounter;
 };
+
