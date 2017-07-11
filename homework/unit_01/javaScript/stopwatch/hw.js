@@ -18,26 +18,47 @@ const Stopwatch = {
   laps: [],
   // DO NOT EDIT ABOVE THIS LINE
   advanceTenMillisecs: function(){
-    // Your Code Here
+    this.millisecs += 10;
+    if (this.millisecs >= 1000) {
+      this.millisecs += 1000;
+      this.secs++;
+    }
+    if (this.secs >= 60) {
+      this.secs -= 60;
+      this.mins++;
+    }
   },
   reset: function(){
-    // Your Code Here
+    this.mins = 0;
+    this.secs = 0;
+    this.millisecs = 0;
+    this.laps = [];
   },
   start: function(){
-    // Your Code Here
+    if (this.isRunning) {
+      this.isRunning = true;
+      this.tickClock();
   },
   stop: function(){
-    // Your Code Here
+    this.isRunning = false;
   },
-  lap: function(){
-    // Your Code Here
+  laps: function(){
+    if (this.isRunning) {
+      this.laps.push({
+        mins: this.mins,
+        secs: this.secs,
+        millisecs: this.millisecs
+      });
+    }
   }
 };
 
 /// User Interface ///
 const ViewEngine = {
   updateTimeDisplay: function(mins, secs, millisecs){
-    // Your Code Here
+    $('#mins'). 
+    $('#secs').
+    $('#millisecs')
   },
   updateLapListDisplay: function(laps){
     // Your Code Here
