@@ -13,20 +13,24 @@ app.set("view engine", "hbs");
 app.set('views', './views');
 
 
-
-
 app.get('/', function (require, response) {
-    response.send("Welcome to Pizza Express!");
+    response.render("Welcome to Pizza Express!");
 });
 
 app.get('/topping/:type', function(require, response, next) {
-    response.send("pepperoni pizza! Good choice.");
+    response.render("pepperoni pizza! Good choice.");
 });
 
 app.get('/order/:amount/:size', function(require, response, next) {
-
-     response.send("Your order for 10 medium pizzas will be ready in 1 minute!");
+     response.render("Your order for 10 medium pizzas will be ready in 1 minute!");
  });
+
+app.get("/test/:someValue", function(req, res, next){ 
+    res.render("index.hbs", { 
+        message: req.params.someValue }); 
+});
+
+
 
 // tells the server to listen for requests on port 3000
 app.listen(port, function(){
