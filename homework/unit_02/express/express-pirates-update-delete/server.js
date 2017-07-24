@@ -6,7 +6,7 @@ var app = express();
 var logger = require("morgan");
 var bodyParser = require("body-parser");
 var hbs = require('hbs');
-
+var methodOverride = require('method-override');
 
 //===========================
 // MIDDLEWARE

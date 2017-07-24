@@ -12,7 +12,7 @@ var pirates = require('../models/pirates.js');
 //for root pirate page
 router.get('/', function(req, res){
 	res.render("pirates/index.hbs", {
-		pirates: pirates
+		pirates: pirates.seededPirates
 	});
 });
 
@@ -29,23 +29,36 @@ router.get('/:id', function(req, res){
 	var showPirate = pirates[req.params.id];
 
 	res.render("pirates/show.hbs", {
-		pirate: showPirate
+		pirates: showPirate
 	});
 });
 
-
-//==============================
 // CREATE
 //==============================
 
-//==============================
-// UPDATE
-//==============================
+router.get('/:id/edit', (req, res) => {
+	const id = req.params.id;
+	const pirates = pirates.seededPirates[id];
+	res.render("pirates/edit", {
+		pirates: pirates, 
+		id: id
+	})
+});
 
-//==============================
-// DESTROY
-//==============================
+router.put('/:id', (req, res) => {
+	const id = req.params.id;
+	const pirates = names.seededPirates[id];
+	pirates.description = req.body.description;
+	pirates.urgent = req.body.urgent;
+	res.method = "GET";
+	res.redirect('/pirates/${id}');
+});
 
+router.delete('/:id', (req,res) => {
+  names.seededPirates.splice(req.params.id, 1);
+  res.method= "GET";
+  res.redirect("/pirates");
+});
 //==============================
 // EXPORTS
 //==============================
