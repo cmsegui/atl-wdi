@@ -10,8 +10,15 @@ class Tamagotchi {
         this.creatureType = creatureType;
     }
     cry() {
-        this.foodInTummy--;
         console.log(this.name,'WAHH!!!');
+    }
+    puke() {
+        this.foodInTummy--;
+        console.log(this.foodInTummy,'WAHH!!!');
+    }
+    yawn() {
+        this.restedness--;
+        console.log(this.name + ' has a current restedness of: ' + this.restedness);
     }
 
 }
@@ -21,8 +28,8 @@ class Tamagotchi {
 let t1 = new Tamagotchi("Lulu", "Dinosaur");
 let t2 = new Tamagotchi("Patty", "Chicken");
 
-t1.cry();
-t2.cry();
+t1.puke();
+t2.yawn();
 
 
 
