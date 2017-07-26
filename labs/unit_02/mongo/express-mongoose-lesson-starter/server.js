@@ -2,10 +2,12 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 var app = express();
-
+var hbs = require('hbs');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+
+app.set('view engine', 'hbs');
 
 var usersController = require("./controllers/usersController.js");
 app.use('/users', usersController);
