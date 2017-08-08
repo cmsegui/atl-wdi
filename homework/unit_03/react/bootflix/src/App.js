@@ -4,7 +4,7 @@ import Header from './components/Header';
 import Search from './components/Search';
 import Movie from './components/Movie';
 import example from './omdbExample.json';
-const apikey = 'd31f1a94';
+const apikey = '';
 
 class App extends Component {
   constructor() {
