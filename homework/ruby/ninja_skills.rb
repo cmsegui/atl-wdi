@@ -28,14 +28,25 @@
 #d = e 
 #puts d
 
-christine = "Hi, I'm Christine"
+#christine = "Hi, I'm Christine"
 
-likesTo = "long walks on the beach, kinda."
+#likesTo = "long walks on the beach, kinda."
 
-tims = christine
-likesTo = " and I like #{likesTo}"
-puts tims + likesTo
+# tims = christine
+# likesTo = " and I like #{likesTo}"
+# puts tims + likesTo
 
-g = "2"
-gToNumber = 2
-puts g.to_i + gToNumber
+# g = "2"
+# gToNumber = 2
+# puts g.to_i + gToNumber
+
+# puts "Whats your favorite number?"
+# number = gets.chomp
+# puts number.to_i * 2
+
+puts "Whats your name?"
+name = gets.chomp
+puts "what do you like to do?"
+hobby = gets.chomp
+print "Hi, I am #{name}" + " and I like to #{hobby}."
+
