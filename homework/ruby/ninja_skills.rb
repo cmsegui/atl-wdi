@@ -18,3 +18,12 @@
 #   print number
 
 #   puts number.class
+
+#d = 10
+#puts d
+
+#e = 3.0
+#puts e
+
+#d = e 
+#puts d
