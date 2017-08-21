@@ -23,7 +23,7 @@ Answer should be no more than a couple of sentences. Refer to the reading.
 1. According to Metz, what is Object-oriented design about?
 
 ```
-Your Answer Here
+
 ```
 
 2. What does SOLID stand for?
