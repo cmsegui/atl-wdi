@@ -44,9 +44,21 @@
 # number = gets.chomp
 # puts number.to_i * 2
 
-puts "Whats your name?"
-name = gets.chomp
-puts "what do you like to do?"
-hobby = gets.chomp
-print "Hi, I am #{name}" + " and I like to #{hobby}."
+# puts "Whats your name?"
+# name = gets.chomp
+# puts "what do you like to do?"
+# hobby = gets.chomp
+# print "Hi, I am #{name}" + " and I like to #{hobby}."
 
+
+myFirstArray = []
+myFirstArray = ["I", "like", "big", "butts", "heyyo!", 3, 4, 5, 6]
+
+puts myFirstArray[8]
+puts myFirstArray[0]
+
+myFirstArray[1] = "Joe"
+myFirstArray[2] = 3
+
+myFirstArray.push(true)
+puts myFirstArray[3].class
