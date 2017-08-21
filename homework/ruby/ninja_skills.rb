@@ -11,7 +11,7 @@
 
 #   number = nil
 
-#   puts number 
+#   p number 
 
 #   puts "#{number}nil was here"
 
@@ -27,3 +27,15 @@
 
 #d = e 
 #puts d
+
+christine = "Hi, I'm Christine"
+
+likesTo = "long walks on the beach, kinda."
+
+tims = christine
+likesTo = " and I like #{likesTo}"
+puts tims + likesTo
+
+g = "2"
+gToNumber = 2
+puts g.to_i + gToNumber
