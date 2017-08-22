@@ -51,14 +51,16 @@
 # print "Hi, I am #{name}" + " and I like to #{hobby}."
 
 
-myFirstArray = []
-myFirstArray = ["I", "like", "big", "butts", "heyyo!", 3, 4, 5, 6]
+# myFirstArray = []
+# myFirstArray = ["I", "like", "big", "butts", "heyyo!", 3, 4, 5, 6]
 
-puts myFirstArray[8]
-puts myFirstArray[0]
+# puts myFirstArray[8]
+# puts myFirstArray[0]
 
-myFirstArray[1] = "Joe"
-myFirstArray[2] = 3
+# myFirstArray[1] = "Joe"
+# myFirstArray[2] = 3
 
-myFirstArray.push(true)
-puts myFirstArray[3].class
+# myFirstArray.push(true)
+# puts myFirstArray[3].class
+
+myFavoriteAnimals = { "Edgar" => "Donkey", "Burns" => "Beaver", "Bonquiqui" => "Cat", }
